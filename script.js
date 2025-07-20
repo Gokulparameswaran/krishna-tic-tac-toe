@@ -76,7 +76,10 @@ function checkwinner(){
 
 function restartgame(){
     options = ["","","","","","","","",""];
-    boxa.forEach(box => box.innerHTML = "");
+    boxa.forEach(box => {
+        box.innerHTML = "";
+        box.classList.remove('win');
+    });
     currentPlayer = x;
     Player = "X";
     status1.textContent = `${Player} Your turn`;
